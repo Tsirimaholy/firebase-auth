@@ -16,7 +16,7 @@ input {
     border-bottom: 3px solid var(--primary);
     border-top-left-radius: .3em;
     border-top-right-radius: .3em;
-    transition: transform 0.7s ease-in, background 0.7s ease;
+    transition: transform 0.5s cubic-bezier(.68,-0.55,.27,1.55), background 0.7s ease;
 }
 
 label {
