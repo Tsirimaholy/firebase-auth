@@ -6,6 +6,8 @@ import Login from './component/Form/Login';
 import {initializeApp} from "firebase/app"
 import {config} from "./config/firebaseConfig";
 import AuthRoute from "./component/AuthRoute";
+import NotFound from "./component/NotFound";
+import "./palette/colors.css"
 
 initializeApp(config.firebaseConfig)
 
