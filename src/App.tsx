@@ -3,13 +3,25 @@ import './App.css';
 import {Route, Routes} from 'react-router-dom';
 import {Home} from "./component/Home";
 import Login from './component/Form/Login';
+import {initializeApp} from "firebase/app"
+import {config} from "./config/firebaseConfig";
+import AuthRoute from "./component/AuthRoute";
+
+initializeApp(config.firebaseConfig)
 
 function App() {
     return (
-        <div >
+        <div>
             <Routes>
-                <Route caseSensitive path="/" element={<Login/>}/>
-                <Route path="login" element={<Home/>}/>
+                <Route
+                    path="/"
+                    element={
+                        <AuthRoute>
+                            <Home/>
+                        </AuthRoute>
+                    }
+                />
+                <Route path="login" element={<Login/>}/>
             </Routes>
         </div>
     );
