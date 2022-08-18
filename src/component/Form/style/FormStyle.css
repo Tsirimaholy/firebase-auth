@@ -1,0 +1,37 @@
+:root {
+    --primary: beige;
+    --secondary-0: rgb(183, 183, 17);
+    --secondary-1: rgb(173, 173, 11);
+    --white-0: white;
+    --white-1: rgb(249, 249, 249);
+}
+
+.container {
+    margin: 5em auto auto;
+    padding: 2em;
+    border: 1px solid var(--primary);
+    border-radius: 0.5em;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgb(230, 230, 230) 1px 2px 3px;
+}
+
+
+input[type="submit"] {
+    display: block;
+    margin-top: 1em;
+    background-color: var(--primary);
+    border: none;
+    color: var(--secondary-1);
+    padding: 0.7em;
+    border-radius: 10%;
+    box-shadow: none;
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: rgb(230, 230, 230) 1px 2px 3px;
+    transform: translateY(1.05);
+}
