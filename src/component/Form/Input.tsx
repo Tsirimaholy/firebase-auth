@@ -1,7 +1,8 @@
 import {InputProps} from "./InputProps";
 import "./style/InputStyle.css"
+import React from "react";
 
-function Input(props: InputProps):JSX.Element {
+const Input: React.FC<InputProps> = props => {
     const {label, id, type} = props;
     return (
         <div>
@@ -9,6 +10,6 @@ function Input(props: InputProps):JSX.Element {
             <input type={type} id={id} autoFocus={id === "username"}/>
         </div>
     );
-}
+};
 
 export default Input;
