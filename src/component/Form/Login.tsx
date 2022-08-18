@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import Input from "./Input";
 import "./style/FormStyle.css";
+import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
+import {useNavigate} from "react-router-dom";
 
 
-function Login(): JSX.Element {
+const Login = () => {
+    const auth = getAuth();
+    const navigate = useNavigate();
+    const [authing, setAuthing] = useState(false);
+    const signInWithGoogle = async () => {
+        setAuthing(true);
+        signInWithPopup(auth, new GoogleAuthProvider()).then((response) => {
+            console.log(response.user.uid);
+            navigate("/login");
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
     return (
         <div>
             <div className="container">
