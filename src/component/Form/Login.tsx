@@ -26,9 +26,7 @@ const Login = () => {
                     <Input id="username" label="Username" type="text"/>
                     <Input id="password" label="Password" type="password"/>
                     <input type="submit" value="Log In" style={{display: "inline", marginRight: "2em"}}/>
-                    <small>
-                        <a href="#">use mail</a>
-                    </small>
+                    <input type="submit" onClick={() => signInWithGoogle()} disabled={authing} value={"use mail"}/>
                 </form>
             </div>
         </div>
