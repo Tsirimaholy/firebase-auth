@@ -1,0 +1,17 @@
+.option-container {
+    display: flex;
+}
+
+.option-container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+}
+
+.option-container > div:hover {
+    cursor: pointer;
+    filter: drop-shadow(1px 2px 3px rgb(191, 191, 191));
+}
