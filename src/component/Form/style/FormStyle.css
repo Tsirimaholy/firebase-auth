@@ -15,7 +15,7 @@ body {
     align-items: center;
 }
 
-.form__container form {
+.form__container .form {
     width: 70%;
 }
 
@@ -36,8 +36,8 @@ input[type="submit"]:hover {
     transform: translateY(1.05);
 }
 
-.signin_option__container {
-    /*display: none;*/
+.signin_option__title {
+    display: none;
 }
 
 @media screen and (min-width: 1080px) {
@@ -52,6 +52,10 @@ input[type="submit"]:hover {
         padding: 5%;
     }
 
+    .signin_option__title {
+        display: block;
+    }
+
     .signin_option__container {
         display: block;
         width: 40%;
@@ -64,7 +68,7 @@ input[type="submit"]:hover {
         box-shadow: rgb(230, 230, 230) 1px 2px 3px;
     }
 
-    .form__container form {
+    .form__container .form {
         flex-grow: 2;
     }
 

@@ -19,7 +19,6 @@ export function Home() {
         <>
             <h1>Welcome to our home page</h1>
             <p>You're now connected</p>
-            {/*todo: implement logout*/}
             <button onClick={() => logOut()}>
                 LogOut
             </button>
