@@ -1,5 +1,9 @@
+body {
+    padding: 3%;
+}
+
 .form__container {
-    margin: 5em auto auto;
+    margin: auto;
     padding: 2em;
     border: 1px solid var(--primary);
     border-radius: 0.5em;
@@ -7,18 +11,22 @@
     display: flex;
     justify-content: center;
     box-shadow: rgb(230, 230, 230) 1px 2px 3px;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
+.form__container form {
+    width: 70%;
+}
 
 input[type="submit"] {
+    font-weight: bolder;
     display: block;
     margin-top: 1em;
     background-color: var(--primary);
     border: none;
-    color: var(--secondary-1);
     padding: 0.7em;
-    border-radius: 10%;
-    box-shadow: none;
+    border-radius: 2em;
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -26,4 +34,42 @@ input[type="submit"]:hover {
     cursor: pointer;
     box-shadow: rgb(230, 230, 230) 1px 2px 3px;
     transform: translateY(1.05);
+}
+
+.signin_option__container {
+    /*display: none;*/
+}
+
+@media screen and (min-width: 1080px) {
+    .form__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    .form__container > * {
+        padding: 5%;
+    }
+
+    .signin_option__container {
+        display: block;
+        width: 40%;
+        background: var(--white-1);
+        border-radius: 5%;
+        transition: box-shadow ease-in;
+    }
+
+    .signin_option__container:hover {
+        box-shadow: rgb(230, 230, 230) 1px 2px 3px;
+    }
+
+    .form__container form {
+        flex-grow: 2;
+    }
+
+    input[type="submit"] {
+        padding: 1em;
+        color: black;
+    }
 }
