@@ -4,7 +4,7 @@ export function Home() {
     return (
         <>
             <h1>Home page</h1>
-            // todo: implement logout
+            {/*todo: implement logout*/}
             <Link to={"/login"}>LogOut</Link>
         </>
     );
