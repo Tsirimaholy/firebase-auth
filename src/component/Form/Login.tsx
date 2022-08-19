@@ -34,11 +34,25 @@ const Login = () => {
     return (
         <div>
             <div className="form__container">
-                <form action="">
+                <div className="signin_option__container">
+                    <div className="signin_option__title">
+                        <h2>SignIn Option</h2>
+                    </div>
+                    <ul>
+                        <li className={"gmail"}>GMail</li>
+                        <li className={"github"}>GitHub</li>
+                        <li className={"facebook"}>Facebook</li>
+                    </ul>
+                </div>
+                <form action="" className="form">
                     <Input id="username" label="Username" type="text"/>
                     <Input id="password" label="Password" type="password"/>
-                    <input type="submit" value="Log In" style={{ marginRight: "2em"}}/>
-                    <input type="submit" onClick={() => signInWithGoogle()} disabled={authing} value={"use mail"}/>
+                    <input type="submit" value="Log In" style={{marginRight: "2em"}}/>
+                    {/*<strong >OR</strong>*/}
+                    <input type="submit"
+                           onClick={() => signInWithGoogle()}
+                           disabled={authing}
+                           value={"use mail"}/>
                 </form>
             </div>
         </div>
