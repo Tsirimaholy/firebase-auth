@@ -1,11 +1,28 @@
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {getAuth, signOut} from "firebase/auth";
+import React from "react";
+
 
 export function Home() {
+    const auth = getAuth();
+    const navigate = useNavigate();
+    const logOut = async () => {
+        signOut(auth)
+            .then(() => {
+                console.log("Succesfuly sign out")
+                navigate("/login");
+            }).catch((error) => {
+            console.log(error)
+        });
+    }
     return (
         <>
-            <h1>Home page</h1>
+            <h1>Welcome to our home page</h1>
+            <p>You're now connected</p>
             {/*todo: implement logout*/}
-            <Link to={"/login"}>LogOut</Link>
+            <button onClick={() => logOut()}>
+                LogOut
+            </button>
         </>
     );
 }
